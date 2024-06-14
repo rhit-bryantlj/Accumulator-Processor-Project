@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/bryantlj/Desktop/rhit-csse232-2021c-projects-2021c_violet/implementation/ControlUnit/work/ControlTest_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="ControlTest" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="/ControlTest/PCSource" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PCSource[1:0]</obj_property>
+      <obj_property name="ObjectShortName">PCSource[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTest/IorD" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">IorD</obj_property>
+      <obj_property name="ObjectShortName">IorD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTest/IRenable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">IRenable</obj_property>
+      <obj_property name="ObjectShortName">IRenable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTest/SetID" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">SetID</obj_property>
+      <obj_property name="ObjectShortName">SetID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTest/CRWrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CRWrite</obj_property>
+      <obj_property name="ObjectShortName">CRWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTest/RegWrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RegWrite</obj_property>
+      <obj_property name="ObjectShortName">RegWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTest/ALUOp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ALUOp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUOp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTest/Asel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Asel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">Asel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTest/Bsel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Bsel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">Bsel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTest/MemWrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">MemWrite</obj_property>
+      <obj_property name="ObjectShortName">MemWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTest/MemRead" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">MemRead</obj_property>
+      <obj_property name="ObjectShortName">MemRead</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTest/PCwrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">PCwrite</obj_property>
+      <obj_property name="ObjectShortName">PCwrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTest/DatSel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">DatSel</obj_property>
+      <obj_property name="ObjectShortName">DatSel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTest/OPcode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">OPcode[4:0]</obj_property>
+      <obj_property name="ObjectShortName">OPcode[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTest/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTest/Reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Reset</obj_property>
+      <obj_property name="ObjectShortName">Reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTest/z" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">z</obj_property>
+      <obj_property name="ObjectShortName">z</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTest/uut/currentState" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentState[4:0]</obj_property>
+      <obj_property name="ObjectShortName">currentState[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTest/uut/nextState" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">nextState[4:0]</obj_property>
+      <obj_property name="ObjectShortName">nextState[4:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,721 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : FullSystemSchm.vf
+// /___/   /\     Timestamp : 05/21/2021 01:50:58
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3a -verilog C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/FullSystemSchm.vf -w C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/FullSystemSchm.sch
+//Design Name: FullSystemSchm
+//Device: spartan3a
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module M4_1E_HXILINX_FullSystemSchm (O, D0, D1, D2, D3, E, S0, S1);
+    
+
+   output O;
+
+   input  D0;
+   input  D1;
+   input  D2;
+   input  D3;
+   input  E;
+   input  S0;
+   input  S1;
+
+   reg O;
+
+   always @ ( D0 or D1 or D2 or D3 or E or S0 or S1)
+   begin
+      if(!E)
+      O <= 1'b0;
+      else 
+      begin
+        case({S1,S0})
+        2'b00 : O <= D0;
+        2'b01 : O <= D1;
+        2'b10 : O <= D2;
+        2'b11 : O <= D3;
+        endcase
+      end
+   end
+    
+endmodule
+`timescale 100 ps / 10 ps
+
+module FD16RE_HXILINX_FullSystemSchm(Q, C, CE, D, R);
+
+   
+   output [15:0]      Q;
+
+   input 	      C;	
+   input 	      CE;	
+   input  [15:0]      D;
+   input 	      R;	
+   
+   reg    [15:0]      Q;
+   
+   always @(posedge C)
+     begin
+	if (R)
+	  Q <= 16'b0000_0000_0000_0000;
+	else if (CE)
+          Q <= D;
+     end
+   
+   
+endmodule
+`timescale 1ns / 1ps
+
+module RegisterFileV2Decoder_MUSER_FullSystemSchm(A, 
+                                                  enable, 
+                                                  O0, 
+                                                  O1, 
+                                                  O2, 
+                                                  O3, 
+                                                  O4, 
+                                                  O5, 
+                                                  O6, 
+                                                  O7, 
+                                                  O8, 
+                                                  O9);
+
+    input [3:0] A;
+    input enable;
+   output O0;
+   output O1;
+   output O2;
+   output O3;
+   output O4;
+   output O5;
+   output O6;
+   output O7;
+   output O8;
+   output O9;
+   
+   wire nA0;
+   wire nA1;
+   wire nA2;
+   wire nA3;
+   
+   INV  XLXI_1 (.I(A[0]), 
+               .O(nA0));
+   INV  XLXI_6 (.I(A[1]), 
+               .O(nA1));
+   INV  XLXI_7 (.I(A[2]), 
+               .O(nA2));
+   INV  XLXI_16 (.I(A[3]), 
+                .O(nA3));
+   AND5  XLXI_25 (.I0(enable), 
+                 .I1(nA3), 
+                 .I2(nA2), 
+                 .I3(nA1), 
+                 .I4(nA0), 
+                 .O(O0));
+   AND5  XLXI_26 (.I0(enable), 
+                 .I1(nA3), 
+                 .I2(nA2), 
+                 .I3(nA1), 
+                 .I4(A[0]), 
+                 .O(O1));
+   AND5  XLXI_27 (.I0(enable), 
+                 .I1(nA3), 
+                 .I2(nA2), 
+                 .I3(A[1]), 
+                 .I4(nA0), 
+                 .O(O2));
+   AND5  XLXI_28 (.I0(enable), 
+                 .I1(nA3), 
+                 .I2(nA2), 
+                 .I3(A[1]), 
+                 .I4(A[0]), 
+                 .O(O3));
+   AND5  XLXI_29 (.I0(enable), 
+                 .I1(nA3), 
+                 .I2(A[2]), 
+                 .I3(nA1), 
+                 .I4(nA0), 
+                 .O(O4));
+   AND5  XLXI_30 (.I0(enable), 
+                 .I1(nA3), 
+                 .I2(A[2]), 
+                 .I3(nA1), 
+                 .I4(A[0]), 
+                 .O(O5));
+   AND5  XLXI_31 (.I0(enable), 
+                 .I1(nA3), 
+                 .I2(A[2]), 
+                 .I3(A[1]), 
+                 .I4(nA0), 
+                 .O(O6));
+   AND5  XLXI_32 (.I0(enable), 
+                 .I1(nA3), 
+                 .I2(A[2]), 
+                 .I3(A[1]), 
+                 .I4(A[0]), 
+                 .O(O7));
+   AND5  XLXI_33 (.I0(enable), 
+                 .I1(A[3]), 
+                 .I2(nA2), 
+                 .I3(nA1), 
+                 .I4(nA0), 
+                 .O(O8));
+   AND5  XLXI_34 (.I0(enable), 
+                 .I1(A[3]), 
+                 .I2(nA2), 
+                 .I3(nA1), 
+                 .I4(A[0]), 
+                 .O(O9));
+endmodule
+`timescale 1ns / 1ps
+
+module RegisterFileV2_MUSER_FullSystemSchm(CLK, 
+                                           DataIn, 
+                                           ReadAddrA, 
+                                           Reset, 
+                                           Write, 
+                                           WriteAddr, 
+                                           ReadDataA);
+
+    input CLK;
+    input [15:0] DataIn;
+    input [3:0] ReadAddrA;
+    input Reset;
+    input Write;
+    input [3:0] WriteAddr;
+   output [15:0] ReadDataA;
+   
+   wire [15:0] A;
+   wire [15:0] B;
+   wire [15:0] C;
+   wire [15:0] D;
+   wire [15:0] E;
+   wire [15:0] F;
+   wire [15:0] G;
+   wire [15:0] H;
+   wire [15:0] I;
+   wire [15:0] J;
+   wire XLXN_161;
+   wire XLXN_162;
+   wire XLXN_163;
+   wire XLXN_164;
+   wire XLXN_165;
+   wire XLXN_166;
+   wire XLXN_167;
+   wire XLXN_168;
+   wire XLXN_169;
+   
+   assign A = 16'h0000;
+   RegisterFileV2Decoder_MUSER_FullSystemSchm  XLXI_1 (.A(WriteAddr[3:0]), 
+                                                      .enable(Write), 
+                                                      .O0(), 
+                                                      .O1(XLXN_161), 
+                                                      .O2(XLXN_162), 
+                                                      .O3(XLXN_163), 
+                                                      .O4(XLXN_164), 
+                                                      .O5(XLXN_165), 
+                                                      .O6(XLXN_166), 
+                                                      .O7(XLXN_167), 
+                                                      .O8(XLXN_168), 
+                                                      .O9(XLXN_169));
+   RegisterFileV2Mux  XLXI_2 (.A(A[15:0]), 
+                             .B(B[15:0]), 
+                             .C(C[15:0]), 
+                             .D(D[15:0]), 
+                             .E(E[15:0]), 
+                             .F(F[15:0]), 
+                             .G(G[15:0]), 
+                             .H(H[15:0]), 
+                             .I(I[15:0]), 
+                             .J(J[15:0]), 
+                             .S(ReadAddrA[3:0]), 
+                             .O(ReadDataA[15:0]));
+   (* HU_SET = "XLXI_4_0" *) 
+   FD16RE_HXILINX_FullSystemSchm  XLXI_4 (.C(CLK), 
+                                         .CE(XLXN_164), 
+                                         .D(DataIn[15:0]), 
+                                         .R(Reset), 
+                                         .Q(E[15:0]));
+   (* HU_SET = "XLXI_16_1" *) 
+   FD16RE_HXILINX_FullSystemSchm  XLXI_16 (.C(CLK), 
+                                          .CE(XLXN_165), 
+                                          .D(DataIn[15:0]), 
+                                          .R(Reset), 
+                                          .Q(F[15:0]));
+   (* HU_SET = "XLXI_17_2" *) 
+   FD16RE_HXILINX_FullSystemSchm  XLXI_17 (.C(CLK), 
+                                          .CE(XLXN_166), 
+                                          .D(DataIn[15:0]), 
+                                          .R(Reset), 
+                                          .Q(G[15:0]));
+   (* HU_SET = "XLXI_18_6" *) 
+   FD16RE_HXILINX_FullSystemSchm  XLXI_18 (.C(CLK), 
+                                          .CE(XLXN_167), 
+                                          .D(DataIn[15:0]), 
+                                          .R(Reset), 
+                                          .Q(H[15:0]));
+   (* HU_SET = "XLXI_22_3" *) 
+   FD16RE_HXILINX_FullSystemSchm  XLXI_22 (.C(CLK), 
+                                          .CE(XLXN_161), 
+                                          .D(DataIn[15:0]), 
+                                          .R(Reset), 
+                                          .Q(B[15:0]));
+   (* HU_SET = "XLXI_23_4" *) 
+   FD16RE_HXILINX_FullSystemSchm  XLXI_23 (.C(CLK), 
+                                          .CE(XLXN_162), 
+                                          .D(DataIn[15:0]), 
+                                          .R(Reset), 
+                                          .Q(C[15:0]));
+   (* HU_SET = "XLXI_24_5" *) 
+   FD16RE_HXILINX_FullSystemSchm  XLXI_24 (.C(CLK), 
+                                          .CE(XLXN_163), 
+                                          .D(DataIn[15:0]), 
+                                          .R(Reset), 
+                                          .Q(D[15:0]));
+   (* HU_SET = "XLXI_25_7" *) 
+   FD16RE_HXILINX_FullSystemSchm  XLXI_25 (.C(CLK), 
+                                          .CE(XLXN_168), 
+                                          .D(DataIn[15:0]), 
+                                          .R(Reset), 
+                                          .Q(I[15:0]));
+   (* HU_SET = "XLXI_26_8" *) 
+   FD16RE_HXILINX_FullSystemSchm  XLXI_26 (.C(CLK), 
+                                          .CE(XLXN_169), 
+                                          .D(DataIn[15:0]), 
+                                          .R(Reset), 
+                                          .Q(J[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module coolRegMux_MUSER_FullSystemSchm(A, 
+                                       B, 
+                                       C, 
+                                       D, 
+                                       S, 
+                                       O);
+
+    input [15:0] A;
+    input [15:0] B;
+    input [15:0] C;
+    input [15:0] D;
+    input [1:0] S;
+   output [15:0] O;
+   
+   wire V;
+   
+   VCC  XLXI_86 (.P(V));
+   (* HU_SET = "XLXI_87_9" *) 
+   M4_1E_HXILINX_FullSystemSchm  XLXI_87 (.D0(A[0]), 
+                                         .D1(B[0]), 
+                                         .D2(C[0]), 
+                                         .D3(D[0]), 
+                                         .E(V), 
+                                         .S0(S[0]), 
+                                         .S1(S[1]), 
+                                         .O(O[0]));
+   (* HU_SET = "XLXI_89_10" *) 
+   M4_1E_HXILINX_FullSystemSchm  XLXI_89 (.D0(A[1]), 
+                                         .D1(B[1]), 
+                                         .D2(C[1]), 
+                                         .D3(D[1]), 
+                                         .E(V), 
+                                         .S0(S[0]), 
+                                         .S1(S[1]), 
+                                         .O(O[1]));
+   (* HU_SET = "XLXI_91_11" *) 
+   M4_1E_HXILINX_FullSystemSchm  XLXI_91 (.D0(A[2]), 
+                                         .D1(B[2]), 
+                                         .D2(C[2]), 
+                                         .D3(D[2]), 
+                                         .E(V), 
+                                         .S0(S[0]), 
+                                         .S1(S[1]), 
+                                         .O(O[2]));
+   (* HU_SET = "XLXI_93_12" *) 
+   M4_1E_HXILINX_FullSystemSchm  XLXI_93 (.D0(A[3]), 
+                                         .D1(B[3]), 
+                                         .D2(C[3]), 
+                                         .D3(D[3]), 
+                                         .E(V), 
+                                         .S0(S[0]), 
+                                         .S1(S[1]), 
+                                         .O(O[3]));
+   (* HU_SET = "XLXI_94_13" *) 
+   M4_1E_HXILINX_FullSystemSchm  XLXI_94 (.D0(A[4]), 
+                                         .D1(B[4]), 
+                                         .D2(C[4]), 
+                                         .D3(D[4]), 
+                                         .E(V), 
+                                         .S0(S[0]), 
+                                         .S1(S[1]), 
+                                         .O(O[4]));
+   (* HU_SET = "XLXI_95_14" *) 
+   M4_1E_HXILINX_FullSystemSchm  XLXI_95 (.D0(A[5]), 
+                                         .D1(B[5]), 
+                                         .D2(C[5]), 
+                                         .D3(D[5]), 
+                                         .E(V), 
+                                         .S0(S[0]), 
+                                         .S1(S[1]), 
+                                         .O(O[5]));
+   (* HU_SET = "XLXI_96_15" *) 
+   M4_1E_HXILINX_FullSystemSchm  XLXI_96 (.D0(A[6]), 
+                                         .D1(B[6]), 
+                                         .D2(C[6]), 
+                                         .D3(D[6]), 
+                                         .E(V), 
+                                         .S0(S[0]), 
+                                         .S1(S[1]), 
+                                         .O(O[6]));
+   (* HU_SET = "XLXI_97_16" *) 
+   M4_1E_HXILINX_FullSystemSchm  XLXI_97 (.D0(A[7]), 
+                                         .D1(B[7]), 
+                                         .D2(C[7]), 
+                                         .D3(D[7]), 
+                                         .E(V), 
+                                         .S0(S[0]), 
+                                         .S1(S[1]), 
+                                         .O(O[7]));
+   (* HU_SET = "XLXI_98_17" *) 
+   M4_1E_HXILINX_FullSystemSchm  XLXI_98 (.D0(A[8]), 
+                                         .D1(B[8]), 
+                                         .D2(C[8]), 
+                                         .D3(D[8]), 
+                                         .E(V), 
+                                         .S0(S[0]), 
+                                         .S1(S[1]), 
+                                         .O(O[8]));
+   (* HU_SET = "XLXI_99_18" *) 
+   M4_1E_HXILINX_FullSystemSchm  XLXI_99 (.D0(A[9]), 
+                                         .D1(B[9]), 
+                                         .D2(C[9]), 
+                                         .D3(D[9]), 
+                                         .E(V), 
+                                         .S0(S[0]), 
+                                         .S1(S[1]), 
+                                         .O(O[9]));
+   (* HU_SET = "XLXI_101_19" *) 
+   M4_1E_HXILINX_FullSystemSchm  XLXI_101 (.D0(A[10]), 
+                                          .D1(B[10]), 
+                                          .D2(C[10]), 
+                                          .D3(D[10]), 
+                                          .E(V), 
+                                          .S0(S[0]), 
+                                          .S1(S[1]), 
+                                          .O(O[10]));
+   (* HU_SET = "XLXI_102_20" *) 
+   M4_1E_HXILINX_FullSystemSchm  XLXI_102 (.D0(A[11]), 
+                                          .D1(B[11]), 
+                                          .D2(C[11]), 
+                                          .D3(D[11]), 
+                                          .E(V), 
+                                          .S0(S[0]), 
+                                          .S1(S[1]), 
+                                          .O(O[11]));
+   (* HU_SET = "XLXI_104_21" *) 
+   M4_1E_HXILINX_FullSystemSchm  XLXI_104 (.D0(A[12]), 
+                                          .D1(B[12]), 
+                                          .D2(C[12]), 
+                                          .D3(D[12]), 
+                                          .E(V), 
+                                          .S0(S[0]), 
+                                          .S1(S[1]), 
+                                          .O(O[12]));
+   (* HU_SET = "XLXI_105_22" *) 
+   M4_1E_HXILINX_FullSystemSchm  XLXI_105 (.D0(A[13]), 
+                                          .D1(B[13]), 
+                                          .D2(C[13]), 
+                                          .D3(D[13]), 
+                                          .E(V), 
+                                          .S0(S[0]), 
+                                          .S1(S[1]), 
+                                          .O(O[13]));
+   (* HU_SET = "XLXI_106_23" *) 
+   M4_1E_HXILINX_FullSystemSchm  XLXI_106 (.D0(A[14]), 
+                                          .D1(B[14]), 
+                                          .D2(C[14]), 
+                                          .D3(D[14]), 
+                                          .E(V), 
+                                          .S0(S[0]), 
+                                          .S1(S[1]), 
+                                          .O(O[14]));
+   (* HU_SET = "XLXI_107_24" *) 
+   M4_1E_HXILINX_FullSystemSchm  XLXI_107 (.D0(A[15]), 
+                                          .D1(B[15]), 
+                                          .D2(C[15]), 
+                                          .D3(D[15]), 
+                                          .E(V), 
+                                          .S0(S[0]), 
+                                          .S1(S[1]), 
+                                          .O(O[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module decode2b4_MUSER_FullSystemSchm(A, 
+                                      enable, 
+                                      O0, 
+                                      O1, 
+                                      O2, 
+                                      O3);
+
+    input [1:0] A;
+    input enable;
+   output O0;
+   output O1;
+   output O2;
+   output O3;
+   
+   wire nA0;
+   wire nA1;
+   
+   INV  XLXI_1 (.I(A[0]), 
+               .O(nA0));
+   INV  XLXI_6 (.I(A[1]), 
+               .O(nA1));
+   AND3  XLXI_15 (.I0(enable), 
+                 .I1(A[1]), 
+                 .I2(A[0]), 
+                 .O(O3));
+   AND3  XLXI_16 (.I0(enable), 
+                 .I1(A[1]), 
+                 .I2(nA0), 
+                 .O(O2));
+   AND3  XLXI_17 (.I0(enable), 
+                 .I1(nA1), 
+                 .I2(A[0]), 
+                 .O(O1));
+   AND3  XLXI_18 (.I0(enable), 
+                 .I1(nA1), 
+                 .I2(nA0), 
+                 .O(O0));
+endmodule
+`timescale 1ns / 1ps
+
+module coolRegFile_MUSER_FullSystemSchm(CLK, 
+                                        CrAddr, 
+                                        CRW, 
+                                        DataIn, 
+                                        Reset, 
+                                        SetID, 
+                                        CoolData);
+
+    input CLK;
+    input [1:0] CrAddr;
+    input CRW;
+    input [15:0] DataIn;
+    input Reset;
+    input SetID;
+   output [15:0] CoolData;
+   
+   wire [15:0] A;
+   wire [15:0] B;
+   wire [15:0] C;
+   wire [1:0] CurCool;
+   wire [15:0] D;
+   wire XLXN_143;
+   wire XLXN_145;
+   wire XLXN_146;
+   wire XLXN_148;
+   
+   (* HU_SET = "XLXI_54_25" *) 
+   FD16RE_HXILINX_FullSystemSchm  XLXI_54 (.C(CLK), 
+                                          .CE(XLXN_143), 
+                                          .D(DataIn[15:0]), 
+                                          .R(Reset), 
+                                          .Q(A[15:0]));
+   (* HU_SET = "XLXI_55_26" *) 
+   FD16RE_HXILINX_FullSystemSchm  XLXI_55 (.C(CLK), 
+                                          .CE(XLXN_145), 
+                                          .D(DataIn[15:0]), 
+                                          .R(Reset), 
+                                          .Q(B[15:0]));
+   (* HU_SET = "XLXI_56_27" *) 
+   FD16RE_HXILINX_FullSystemSchm  XLXI_56 (.C(CLK), 
+                                          .CE(XLXN_146), 
+                                          .D(DataIn[15:0]), 
+                                          .R(Reset), 
+                                          .Q(C[15:0]));
+   (* HU_SET = "XLXI_57_28" *) 
+   FD16RE_HXILINX_FullSystemSchm  XLXI_57 (.C(CLK), 
+                                          .CE(XLXN_148), 
+                                          .D(DataIn[15:0]), 
+                                          .R(Reset), 
+                                          .Q(D[15:0]));
+   decode2b4_MUSER_FullSystemSchm  XLXI_62 (.A(CurCool[1:0]), 
+                                           .enable(CRW), 
+                                           .O0(XLXN_143), 
+                                           .O1(XLXN_145), 
+                                           .O2(XLXN_146), 
+                                           .O3(XLXN_148));
+   FDRE #( .INIT(1'b0) ) XLXI_71 (.C(CLK), 
+                 .CE(SetID), 
+                 .D(CrAddr[0]), 
+                 .R(Reset), 
+                 .Q(CurCool[0]));
+   FDRE #( .INIT(1'b0) ) XLXI_72 (.C(CLK), 
+                 .CE(SetID), 
+                 .D(CrAddr[1]), 
+                 .R(Reset), 
+                 .Q(CurCool[1]));
+   coolRegMux_MUSER_FullSystemSchm  XLXI_75 (.A(A[15:0]), 
+                                            .B(B[15:0]), 
+                                            .C(C[15:0]), 
+                                            .D(D[15:0]), 
+                                            .S(CurCool[1:0]), 
+                                            .O(CoolData[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module FullSystemSchm(CLK, 
+                      Input, 
+                      Instruction, 
+                      MemDataOut, 
+                      Reset, 
+                      CoolData, 
+                      Cycles, 
+                      IorDOutput);
+
+    input CLK;
+    input [15:0] Input;
+    input [15:0] Instruction;
+    input [15:0] MemDataOut;
+    input Reset;
+   output [15:0] CoolData;
+   output [15:0] Cycles;
+   output [15:0] IorDOutput;
+   
+   wire [1:0] AluOp;
+   wire [1:0] ASel;
+   wire [1:0] BSel;
+   wire CRWrite;
+   wire [1:0] DatSel;
+   wire IorD;
+   wire IRenable;
+   wire MemRead;
+   wire MemWrite;
+   wire [4:0] opCode;
+   wire [15:0] OutputInst;
+   wire [15:0] PCout;
+   wire [1:0] PCSource;
+   wire PCWrite;
+   wire RegWrite;
+   wire SetID;
+   wire [15:0] XLXN_34;
+   wire [15:0] XLXN_67;
+   wire [15:0] XLXN_68;
+   wire [15:0] XLXN_72;
+   wire [15:0] XLXN_73;
+   wire [15:0] XLXN_84;
+   wire [15:0] XLXN_85;
+   wire [15:0] XLXN_132;
+   wire [15:0] XLXN_133;
+   wire [15:0] XLXN_135;
+   wire [13:0] XLXN_138;
+   wire [15:0] XLXN_176;
+   wire [15:0] XLXN_190;
+   wire [15:0] XLXN_191;
+   wire XLXN_193;
+   
+   assign XLXN_84 = 16'h0000;
+   coolRegFile_MUSER_FullSystemSchm  XLXI_2 (.CLK(CLK), 
+                                            .CrAddr(OutputInst[1:0]), 
+                                            .CRW(CRWrite), 
+                                            .DataIn(XLXN_190[15:0]), 
+                                            .Reset(Reset), 
+                                            .SetID(SetID), 
+                                            .CoolData(XLXN_34[15:0]));
+   SignExtender  XLXI_4 (.IR_branch(OutputInst[12:0]), 
+                        .IR_immediate(OutputInst[10:0]), 
+                        .IR_msb(OutputInst[15:15]), 
+                        .SEOUT(XLXN_68[15:0]));
+   IRCodeForSchm  XLXI_5 (.CLK(CLK), 
+                         .enable(IRenable), 
+                         .Instruction(Instruction[15:0]), 
+                         .opCode(opCode[4:0]), 
+                         .OutputInst(OutputInst[15:0]));
+   RegisterFileV2_MUSER_FullSystemSchm  XLXI_11 (.CLK(CLK), 
+                                                .DataIn(XLXN_190[15:0]), 
+                                                .ReadAddrA(OutputInst[3:0]), 
+                                                .Reset(Reset), 
+                                                .Write(RegWrite), 
+                                                .WriteAddr(OutputInst[3:0]), 
+                                                .ReadDataA(XLXN_67[15:0]));
+   TwoBitMuxCode  XLXI_20 (.A(XLXN_67[15:0]), 
+                          .B(XLXN_34[15:0]), 
+                          .C(XLXN_68[15:0]), 
+                          .D(XLXN_85[15:0]), 
+                          .Selector(BSel[1:0]), 
+                          .Output(XLXN_72[15:0]));
+   TwoBitMuxCode  XLXI_24 (.A(XLXN_133[15:0]), 
+                          .B(XLXN_67[15:0]), 
+                          .C(XLXN_34[15:0]), 
+                          .D(XLXN_84[15:0]), 
+                          .Selector(ASel[1:0]), 
+                          .Output(XLXN_73[15:0]));
+   ALUCodeScm  XLXI_33 (.a(XLXN_73[15:0]), 
+                       .b(XLXN_72[15:0]), 
+                       .s(AluOp[1:0]), 
+                       .g(XLXN_191[15:0]), 
+                       .o(XLXN_176[15:0]), 
+                       .z(XLXN_193));
+   LeftShifter  XLXI_36 (.inputVal(XLXN_68[15:0]), 
+                        .ShiftedVal(XLXN_85[15:0]));
+   PCALU  XLXI_47 (.CLK(CLK), 
+                  .PCIN(PCout[15:0]), 
+                  .PCOUT(XLXN_133[15:0]));
+   PCMux  XLXI_48 (.ALUPC(XLXN_176[15:0]), 
+                  .ConcatenatedPC(XLXN_135[15:0]), 
+                  .PCincrement(XLXN_133[15:0]), 
+                  .s(PCSource[1:0]), 
+                  .SelectedPC(XLXN_132[15:0]));
+   PCRegister  XLXI_49 (.CLK(CLK), 
+                       .PCIn(XLXN_132[15:0]), 
+                       .PCWrite(PCWrite), 
+                       .Reset(Reset), 
+                       .PCout(PCout[15:0]));
+   PCandIR_Concatenate  XLXI_50 (.LeftShiftedIR(XLXN_138[13:0]), 
+                                .TwoBitsPC(PCout[15:14]), 
+                                .ConcatenatedOutput(XLXN_135[15:0]));
+   IRLeftShift1ForPC  XLXI_51 (.IR(OutputInst[12:0]), 
+                              .LeftShiftedOutput(XLXN_138[13:0]));
+   Control  XLXI_52 (.CLK(CLK), 
+                    .OPcode(opCode[4:0]), 
+                    .Reset(Reset), 
+                    .z(XLXN_193), 
+                    .ALUOp(AluOp[1:0]), 
+                    .Asel(ASel[1:0]), 
+                    .Bsel(BSel[1:0]), 
+                    .CRWrite(CRWrite), 
+                    .DatSel(DatSel[1:0]), 
+                    .IorD(IorD), 
+                    .IRenable(IRenable), 
+                    .MemRead(MemRead), 
+                    .MemWrite(MemWrite), 
+                    .PCSource(PCSource[1:0]), 
+                    .PCwrite(PCWrite), 
+                    .RegWrite(RegWrite), 
+                    .SetID(SetID));
+   OneBitMux  XLXI_56 (.A(PCout[15:0]), 
+                      .B(XLXN_176[15:0]), 
+                      .Selector(IorD), 
+                      .Output(IorDOutput[15:0]));
+   TwoBitMuxCode  XLXI_57 (.A(MemDataOut[15:0]), 
+                          .B(XLXN_176[15:0]), 
+                          .C(Input[15:0]), 
+                          .D(XLXN_191[15:0]), 
+                          .Selector(DatSel[1:0]), 
+                          .Output(XLXN_190[15:0]));
+   CycleCounter  XLXI_58 (.CLK(CLK), 
+                         .Reset(Reset), 
+                         .CycleCount(Cycles[15:0]));
+endmodule

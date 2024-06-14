@@ -1,0 +1,65 @@
+Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/FullSystemSchm_FullSystemSchm_sch_tb_isim_beh.exe -prj C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/FullSystemSchm_FullSystemSchm_sch_tb_beh.prj work.FullSystemSchm_FullSystemSchm_sch_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 16
+Turning on mult-threading, number of parallel sub-compilation jobs: 32 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/RegisterFileV2Mux.v" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/RegisterFileV2Decoder.vf" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/decode2b4.vf" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/coolRegMux.vf" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/TwoBitMuxCode.v" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/SignExtender.v" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/RegisterFileV2.vf" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/PCRegister.v" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/PCmux.v" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/PCandIR_Concatenate.v" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/PCALU.v" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/OneBitMux.v" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/LeftShifter.v" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/IRLeftShift1ForPC.v" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/IRCodeForSchm.v" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/CycleCounter.v" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/coolRegFile.vf" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/Control.v" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/ALUCodeScm.v" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/FullSystemSchm.vf" into library work
+Analyzing Verilog file "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/FullSystemTest.v" into library work
+Analyzing Verilog file "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/FullSystemTest.v" Line 20: Port CoolData is not connected to this instance
+Completed static elaboration
+Compiling module FD16RE_HXILINX_FullSystemSchm
+Compiling module INV
+Compiling module AND3
+Compiling module decode2b4_MUSER_FullSystemSchm
+Compiling module FDRE
+Compiling module VCC
+Compiling module M4_1E_HXILINX_FullSystemSchm
+Compiling module coolRegMux_MUSER_FullSystemSchm
+Compiling module coolRegFile_MUSER_FullSystemSchm
+Compiling module SignExtender
+Compiling module IRCodeForSchm
+Compiling module AND5
+Compiling module RegisterFileV2Decoder_MUSER_Full...
+Compiling module RegisterFileV2Mux
+Compiling module RegisterFileV2_MUSER_FullSystemS...
+Compiling module TwoBitMuxCode
+Compiling module ALUCodeScm
+Compiling module LeftShifter
+Compiling module PCALU
+Compiling module PCMux
+Compiling module PCRegister
+Compiling module PCandIR_Concatenate
+Compiling module IRLeftShift1ForPC
+Compiling module Control
+Compiling module OneBitMux
+Compiling module CycleCounter
+Compiling module FullSystemSchm
+Compiling module FullSystemSchm_FullSystemSchm_sc...
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 29 Verilog Units
+Built simulation executable C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/FullSystemSchm_FullSystemSchm_sch_tb_isim_beh.exe
+Fuse Memory Usage: 30496 KB
+Fuse CPU Usage: 468 ms

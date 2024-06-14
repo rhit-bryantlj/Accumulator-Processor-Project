@@ -1,0 +1,12 @@
+[Inputs]
+=Selector[1:0]=
+=A[15:0]=
+=B[15:0]=
+=C[15:0]=
+=D[15:0]=
+[Outputs]
+=Output[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel TwoBitMuxCode
+

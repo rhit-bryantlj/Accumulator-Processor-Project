@@ -1,0 +1,60 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : decode2b4.vf
+// /___/   /\     Timestamp : 05/20/2021 22:14:00
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3a -verilog C:/Users/bryantlj/Desktop/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/decode2b4.vf -w C:/Users/bryantlj/Desktop/rhit-csse232-2021c-projects-2021c_violet/implementation/FullSystem/decode2b4.sch
+//Design Name: decode2b4
+//Device: spartan3a
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module decode2b4(A, 
+                 enable, 
+                 O0, 
+                 O1, 
+                 O2, 
+                 O3);
+
+    input [1:0] A;
+    input enable;
+   output O0;
+   output O1;
+   output O2;
+   output O3;
+   
+   wire nA0;
+   wire nA1;
+   
+   INV  XLXI_1 (.I(A[0]), 
+               .O(nA0));
+   INV  XLXI_6 (.I(A[1]), 
+               .O(nA1));
+   AND3  XLXI_15 (.I0(enable), 
+                 .I1(A[1]), 
+                 .I2(A[0]), 
+                 .O(O3));
+   AND3  XLXI_16 (.I0(enable), 
+                 .I1(A[1]), 
+                 .I2(nA0), 
+                 .O(O2));
+   AND3  XLXI_17 (.I0(enable), 
+                 .I1(nA1), 
+                 .I2(A[0]), 
+                 .O(O1));
+   AND3  XLXI_18 (.I0(enable), 
+                 .I1(nA1), 
+                 .I2(nA0), 
+                 .O(O0));
+endmodule

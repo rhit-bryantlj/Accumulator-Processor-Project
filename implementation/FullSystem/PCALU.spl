@@ -1,0 +1,9 @@
+[Inputs]
+CLK
+=PCIN[15:0]=
+[Outputs]
+=PCOUT[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel PCALU
+

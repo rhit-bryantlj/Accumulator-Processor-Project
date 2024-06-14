@@ -1,0 +1,11 @@
+[Inputs]
+clka
+=addra[9:0]=
+=dina[15:0]=
+=wea[0:0]=
+[Outputs]
+=douta[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel blockmemory16kx1
+

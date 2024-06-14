@@ -1,0 +1,8 @@
+[Inputs]
+=inputVal[15:0]=
+[Outputs]
+=ShiftedVal[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel LeftShifter
+

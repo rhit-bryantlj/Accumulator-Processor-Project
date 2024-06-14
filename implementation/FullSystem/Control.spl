@@ -1,0 +1,23 @@
+[Inputs]
+CLK
+Reset
+z
+=OPcode[4:0]=
+[Outputs]
+IorD
+IRenable
+SetID
+CRWrite
+RegWrite
+MemWrite
+MemRead
+PCwrite
+=PCSource[1:0]=
+=ALUOp[1:0]=
+=Asel[1:0]=
+=Bsel[1:0]=
+=DatSel[1:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Control
+

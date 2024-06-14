@@ -1,0 +1,12 @@
+[Inputs]
+=a[15:0]=
+=b[15:0]=
+=s[1:0]=
+[Outputs]
+z
+=o[15:0]=
+=g[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel ALUCodeScm
+
