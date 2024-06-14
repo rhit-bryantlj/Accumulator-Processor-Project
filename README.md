@@ -1,4 +1,4 @@
-#16-Bit Multi-Accumulator Processor - 
+# 16-Bit Multi-Accumulator Processor - 
 
 Verilog implemented 16-bit CPU Accumulator Architecture designed with a team of 4. The project consisted of developing our own ISA, Datapath design, Control Flow, State Diagram, and Verilog simulation tests.
 
@@ -6,7 +6,7 @@ Verilog implemented 16-bit CPU Accumulator Architecture designed with a team of 
 
 Our Team decided to use an accumulator processor because that allowed for an easier to use instruction set that only requires an opcode and an address or value. 
 
-##ISA
+## ISA
 
 We developed an ISA using a 5 bit opcode and 13 machine instructions. Only 4 bits are necessary for 13 machine instructions (2^4 = 16), however we implemented our instruction set
 to immediately know on instruction decoding whether the instruction was a jump or an operation. If the first bit is a 1, the instruction is a jump and the opcode length is determined
