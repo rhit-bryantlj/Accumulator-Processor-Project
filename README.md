@@ -1,4 +1,4 @@
-# 16-Bit Multi-Accumulator Processor - 
+# 16-Bit Multi-Accumulator Processor
 
 Verilog implemented 16-bit CPU Accumulator Architecture designed with a team of 4. The project consisted of developing our own ISA, Datapath design, Control Flow, State Diagram, and Verilog simulation tests.
 
