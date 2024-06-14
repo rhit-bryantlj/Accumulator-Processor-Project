@@ -1,0 +1,11 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/bartheic/Desktop/rhit-csse232-2021c-projects-2021c_violet/implementation/RegisterFile/regFile16b8_regFile16b8_sch_tb_isim_beh.exe -prj C:/Users/bartheic/Desktop/rhit-csse232-2021c-projects-2021c_violet/implementation/RegisterFile/regFile16b8_regFile16b8_sch_tb_beh.prj work.regFile16b8_regFile16b8_sch_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/bartheic/Desktop/rhit-csse232-2021c-projects-2021c_violet/implementation/RegisterFile/regFile16b8.vf" into library work
+Analyzing Verilog file "C:/Users/bartheic/Desktop/rhit-csse232-2021c-projects-2021c_violet/implementation/RegisterFile/regFile16b8Test.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+ERROR:HDLCompiler:1654 - "C:/Users/bartheic/Desktop/rhit-csse232-2021c-projects-2021c_violet/implementation/RegisterFile/regFile16b8.vf" Line 328: Instantiating <XLXI_69> from unknown module <RegisterFileMux>
+ERROR:Simulator:778 - Static elaboration of top level Verilog design unit(s) in library work failed

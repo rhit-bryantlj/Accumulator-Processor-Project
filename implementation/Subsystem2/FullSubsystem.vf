@@ -1,0 +1,63 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : FullSubsystem.vf
+// /___/   /\     Timestamp : 05/17/2021 22:44:42
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/Subsystem2/FullSubsystem.vf -w C:/Users/hunte/Desktop/CSSE232/rhit-csse232-2021c-projects-2021c_violet/implementation/Subsystem2/FullSubsystem.sch
+//Design Name: FullSubsystem
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FullSubsystem(ALUbranchOutput, 
+                     CLK, 
+                     IR, 
+                     PCSource, 
+                     PCwrite, 
+                     Reset, 
+                     NewPC);
+
+    input [15:0] ALUbranchOutput;
+    input CLK;
+    input [12:0] IR;
+    input [1:0] PCSource;
+    input PCwrite;
+    input Reset;
+   output [15:0] NewPC;
+   
+   wire [15:0] SelectedPC;
+   wire [15:0] XLXN_4;
+   wire [13:0] XLXN_5;
+   wire [15:0] XLXN_6;
+   wire [15:0] NewPC_DUMMY;
+   
+   assign NewPC[15:0] = NewPC_DUMMY[15:0];
+   PCALU  XLXI_1 (.PCIN(NewPC_DUMMY[15:0]), 
+                 .PCOUT(XLXN_4[15:0]));
+   PCMux  XLXI_2 (.ALUPC(ALUbranchOutput[15:0]), 
+                 .ConcatenatedPC(XLXN_6[15:0]), 
+                 .PCincrement(XLXN_4[15:0]), 
+                 .s(PCSource[1:0]), 
+                 .SelectedPC(SelectedPC[15:0]));
+   PCRegister  XLXI_3 (.CLK(CLK), 
+                      .PCIn(SelectedPC[15:0]), 
+                      .PCWrite(PCwrite), 
+                      .Reset(Reset), 
+                      .PCout(NewPC_DUMMY[15:0]));
+   PCandIR_Concatenate  XLXI_4 (.LeftShiftedIR(XLXN_5[13:0]), 
+                               .TwoBitsPC(NewPC_DUMMY[15:14]), 
+                               .ConcatenatedOutput(XLXN_6[15:0]));
+   IRLeftShift1ForPC  XLXI_5 (.IR(IR[12:0]), 
+                             .LeftShiftedOutput(XLXN_5[13:0]));
+endmodule

@@ -1,0 +1,27 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : IRSchematic.vf
+// /___/   /\     Timestamp : 05/04/2021 13:05:50
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/bartheic/Desktop/rhit-csse232-2021c-projects-2021c_violet/implementation/IR/IRVerilog/IRSchematic.vf -w C:/Users/bartheic/Desktop/rhit-csse232-2021c-projects-2021c_violet/implementation/IR/IRVerilog/IRSchematic.sch
+//Design Name: IRSchematic
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module IRSchematic();
+
+   
+   
+endmodule

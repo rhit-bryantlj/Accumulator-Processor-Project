@@ -1,0 +1,9 @@
+[Inputs]
+=LeftShiftedIR[13:0]=
+=TwoBitsPC[1:0]=
+[Outputs]
+=ConcatenatedOutput[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel PCandIR_Concatenate
+

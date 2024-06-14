@@ -1,0 +1,11 @@
+[Inputs]
+enable
+CLK
+=Instruction[15:0]=
+[Outputs]
+=OutputInst[15:0]=
+=opCode[4:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel IRCodeForSchm
+

@@ -1,0 +1,10 @@
+[Inputs]
+IR_msb
+=IR_immediate[10:0]=
+=IR_branch[12:0]=
+[Outputs]
+=SEOUT[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel SignExtender
+

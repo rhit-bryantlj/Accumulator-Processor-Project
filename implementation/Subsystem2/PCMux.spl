@@ -1,0 +1,11 @@
+[Inputs]
+=ALUPC[15:0]=
+=ConcatenatedPC[15:0]=
+=PCincrement[15:0]=
+=s[1:0]=
+[Outputs]
+=SelectedPC[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel PCMux
+

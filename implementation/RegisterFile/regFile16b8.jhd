@@ -1,0 +1,7 @@
+MODULE regFile16b8
+	SUBMODULE registerFileDecoder
+		INSTANCE XLXI_66
+	SUBMODULE RegisterFileMux
+		INSTANCE XLXI_69
+	SUBMODULE RegisterFileMux
+		INSTANCE XLXI_70

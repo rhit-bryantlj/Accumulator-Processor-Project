@@ -1,0 +1,5 @@
+MODULE RegisterFileV2
+	SUBMODULE RegisterFileV2Decoder
+		INSTANCE XLXI_1
+	SUBMODULE RegisterFileV2Mux
+		INSTANCE XLXI_2

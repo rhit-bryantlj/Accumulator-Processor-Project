@@ -1,0 +1,9 @@
+[Inputs]
+enable
+=Instruction[15:0]=
+[Outputs]
+=OutputInst[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel IRSchematic
+

@@ -1,0 +1,352 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : regFile16b8.vf
+// /___/   /\     Timestamp : 05/07/2021 10:14:06
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/bartheic/Desktop/rhit-csse232-2021c-projects-2021c_violet/implementation/RegisterFile/regFile16b8.vf -w C:/Users/bartheic/Desktop/rhit-csse232-2021c-projects-2021c_violet/implementation/RegisterFile/regFile16b8.sch
+//Design Name: regFile16b8
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FD16RE_MXILINX_regFile16b8(C, 
+                                  CE, 
+                                  D, 
+                                  R, 
+                                  Q);
+
+    input C;
+    input CE;
+    input [15:0] D;
+    input R;
+   output [15:0] Q;
+   
+   
+   FDRE #( .INIT(1'b0) ) I_Q0 (.C(C), 
+              .CE(CE), 
+              .D(D[0]), 
+              .R(R), 
+              .Q(Q[0]));
+   FDRE #( .INIT(1'b0) ) I_Q1 (.C(C), 
+              .CE(CE), 
+              .D(D[1]), 
+              .R(R), 
+              .Q(Q[1]));
+   FDRE #( .INIT(1'b0) ) I_Q2 (.C(C), 
+              .CE(CE), 
+              .D(D[2]), 
+              .R(R), 
+              .Q(Q[2]));
+   FDRE #( .INIT(1'b0) ) I_Q3 (.C(C), 
+              .CE(CE), 
+              .D(D[3]), 
+              .R(R), 
+              .Q(Q[3]));
+   FDRE #( .INIT(1'b0) ) I_Q4 (.C(C), 
+              .CE(CE), 
+              .D(D[4]), 
+              .R(R), 
+              .Q(Q[4]));
+   FDRE #( .INIT(1'b0) ) I_Q5 (.C(C), 
+              .CE(CE), 
+              .D(D[5]), 
+              .R(R), 
+              .Q(Q[5]));
+   FDRE #( .INIT(1'b0) ) I_Q6 (.C(C), 
+              .CE(CE), 
+              .D(D[6]), 
+              .R(R), 
+              .Q(Q[6]));
+   FDRE #( .INIT(1'b0) ) I_Q7 (.C(C), 
+              .CE(CE), 
+              .D(D[7]), 
+              .R(R), 
+              .Q(Q[7]));
+   FDRE #( .INIT(1'b0) ) I_Q8 (.C(C), 
+              .CE(CE), 
+              .D(D[8]), 
+              .R(R), 
+              .Q(Q[8]));
+   FDRE #( .INIT(1'b0) ) I_Q9 (.C(C), 
+              .CE(CE), 
+              .D(D[9]), 
+              .R(R), 
+              .Q(Q[9]));
+   FDRE #( .INIT(1'b0) ) I_Q10 (.C(C), 
+               .CE(CE), 
+               .D(D[10]), 
+               .R(R), 
+               .Q(Q[10]));
+   FDRE #( .INIT(1'b0) ) I_Q11 (.C(C), 
+               .CE(CE), 
+               .D(D[11]), 
+               .R(R), 
+               .Q(Q[11]));
+   FDRE #( .INIT(1'b0) ) I_Q12 (.C(C), 
+               .CE(CE), 
+               .D(D[12]), 
+               .R(R), 
+               .Q(Q[12]));
+   FDRE #( .INIT(1'b0) ) I_Q13 (.C(C), 
+               .CE(CE), 
+               .D(D[13]), 
+               .R(R), 
+               .Q(Q[13]));
+   FDRE #( .INIT(1'b0) ) I_Q14 (.C(C), 
+               .CE(CE), 
+               .D(D[14]), 
+               .R(R), 
+               .Q(Q[14]));
+   FDRE #( .INIT(1'b0) ) I_Q15 (.C(C), 
+               .CE(CE), 
+               .D(D[15]), 
+               .R(R), 
+               .Q(Q[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module registerFileDecoder_MUSER_regFile16b8(A, 
+                                             enable, 
+                                             O0, 
+                                             O1, 
+                                             O2, 
+                                             O3, 
+                                             O4, 
+                                             O5, 
+                                             O6, 
+                                             O7, 
+                                             O8, 
+                                             O9);
+
+    input [3:0] A;
+    input enable;
+   output O0;
+   output O1;
+   output O2;
+   output O3;
+   output O4;
+   output O5;
+   output O6;
+   output O7;
+   output O8;
+   output O9;
+   
+   wire nA0;
+   wire nA1;
+   wire nA2;
+   wire nA3;
+   
+   INV  XLXI_1 (.I(A[0]), 
+               .O(nA0));
+   INV  XLXI_6 (.I(A[1]), 
+               .O(nA1));
+   INV  XLXI_7 (.I(A[2]), 
+               .O(nA2));
+   INV  XLXI_16 (.I(A[3]), 
+                .O(nA3));
+   AND5  XLXI_25 (.I0(enable), 
+                 .I1(nA3), 
+                 .I2(nA2), 
+                 .I3(nA1), 
+                 .I4(nA0), 
+                 .O(O0));
+   AND5  XLXI_26 (.I0(enable), 
+                 .I1(nA3), 
+                 .I2(nA2), 
+                 .I3(nA1), 
+                 .I4(A[0]), 
+                 .O(O1));
+   AND5  XLXI_27 (.I0(enable), 
+                 .I1(nA3), 
+                 .I2(nA2), 
+                 .I3(A[1]), 
+                 .I4(nA0), 
+                 .O(O2));
+   AND5  XLXI_28 (.I0(enable), 
+                 .I1(nA3), 
+                 .I2(nA2), 
+                 .I3(A[1]), 
+                 .I4(A[0]), 
+                 .O(O3));
+   AND5  XLXI_29 (.I0(enable), 
+                 .I1(nA3), 
+                 .I2(A[2]), 
+                 .I3(nA1), 
+                 .I4(nA0), 
+                 .O(O4));
+   AND5  XLXI_30 (.I0(enable), 
+                 .I1(nA3), 
+                 .I2(A[2]), 
+                 .I3(nA1), 
+                 .I4(A[0]), 
+                 .O(O5));
+   AND5  XLXI_31 (.I0(enable), 
+                 .I1(nA3), 
+                 .I2(A[2]), 
+                 .I3(A[1]), 
+                 .I4(nA0), 
+                 .O(O6));
+   AND5  XLXI_32 (.I0(enable), 
+                 .I1(nA3), 
+                 .I2(A[2]), 
+                 .I3(A[1]), 
+                 .I4(A[0]), 
+                 .O(O7));
+   AND5  XLXI_33 (.I0(enable), 
+                 .I1(A[3]), 
+                 .I2(nA2), 
+                 .I3(nA1), 
+                 .I4(nA0), 
+                 .O(O8));
+   AND5  XLXI_34 (.I0(enable), 
+                 .I1(A[3]), 
+                 .I2(nA2), 
+                 .I3(nA1), 
+                 .I4(A[0]), 
+                 .O(O9));
+endmodule
+`timescale 1ns / 1ps
+
+module regFile16b8(CLK, 
+                   DataIn, 
+                   ReadAddrA, 
+                   ReadAddrB, 
+                   Write, 
+                   WriteAddr, 
+                   ReadDataA, 
+                   ReadDataB);
+
+    input CLK;
+    input [15:0] DataIn;
+    input [3:0] ReadAddrA;
+    input [3:0] ReadAddrB;
+    input Write;
+    input [3:0] WriteAddr;
+   output [15:0] ReadDataA;
+   output [15:0] ReadDataB;
+   
+   wire [15:0] A;
+   wire [15:0] B;
+   wire [15:0] C;
+   wire [15:0] D;
+   wire [15:0] E;
+   wire [15:0] F;
+   wire [15:0] G;
+   wire [15:0] H;
+   wire [15:0] I;
+   wire [15:0] J;
+   wire low;
+   wire XLXN_136;
+   wire XLXN_153;
+   wire XLXN_154;
+   wire XLXN_155;
+   wire XLXN_156;
+   wire XLXN_157;
+   wire XLXN_158;
+   wire XLXN_161;
+   wire XLXN_163;
+   
+   assign A = 16'h0000;
+   (* HU_SET = "Register1_0" *) 
+   FD16RE_MXILINX_regFile16b8  Register1 (.C(CLK), 
+                                         .CE(XLXN_153), 
+                                         .D(DataIn[15:0]), 
+                                         .R(low), 
+                                         .Q(B[15:0]));
+   (* HU_SET = "Register2_1" *) 
+   FD16RE_MXILINX_regFile16b8  Register2 (.C(CLK), 
+                                         .CE(XLXN_154), 
+                                         .D(DataIn[15:0]), 
+                                         .R(low), 
+                                         .Q(C[15:0]));
+   (* HU_SET = "Register3_2" *) 
+   FD16RE_MXILINX_regFile16b8  Register3 (.C(CLK), 
+                                         .CE(XLXN_155), 
+                                         .D(DataIn[15:0]), 
+                                         .R(low), 
+                                         .Q(D[15:0]));
+   (* HU_SET = "Register4_3" *) 
+   FD16RE_MXILINX_regFile16b8  Register4 (.C(CLK), 
+                                         .CE(XLXN_156), 
+                                         .D(DataIn[15:0]), 
+                                         .R(low), 
+                                         .Q(E[15:0]));
+   (* HU_SET = "Register5_4" *) 
+   FD16RE_MXILINX_regFile16b8  Register5 (.C(CLK), 
+                                         .CE(XLXN_157), 
+                                         .D(DataIn[15:0]), 
+                                         .R(low), 
+                                         .Q(F[15:0]));
+   (* HU_SET = "Register6_5" *) 
+   FD16RE_MXILINX_regFile16b8  Register6 (.C(CLK), 
+                                         .CE(XLXN_158), 
+                                         .D(DataIn[15:0]), 
+                                         .R(low), 
+                                         .Q(G[15:0]));
+   (* HU_SET = "Register7_6" *) 
+   FD16RE_MXILINX_regFile16b8  Register7 (.C(CLK), 
+                                         .CE(XLXN_136), 
+                                         .D(DataIn[15:0]), 
+                                         .R(low), 
+                                         .Q(H[15:0]));
+   (* HU_SET = "Register8_7" *) 
+   FD16RE_MXILINX_regFile16b8  Register8 (.C(CLK), 
+                                         .CE(XLXN_161), 
+                                         .D(DataIn[15:0]), 
+                                         .R(low), 
+                                         .Q(I[15:0]));
+   (* HU_SET = "Register9_8" *) 
+   FD16RE_MXILINX_regFile16b8  Register9 (.C(CLK), 
+                                         .CE(XLXN_163), 
+                                         .D(DataIn[15:0]), 
+                                         .R(low), 
+                                         .Q(J[15:0]));
+   GND  XLXI_3 (.G(low));
+   registerFileDecoder_MUSER_regFile16b8  XLXI_66 (.A(WriteAddr[3:0]), 
+                                                  .enable(Write), 
+                                                  .O0(), 
+                                                  .O1(XLXN_153), 
+                                                  .O2(XLXN_154), 
+                                                  .O3(XLXN_155), 
+                                                  .O4(XLXN_156), 
+                                                  .O5(XLXN_157), 
+                                                  .O6(XLXN_158), 
+                                                  .O7(XLXN_136), 
+                                                  .O8(XLXN_161), 
+                                                  .O9(XLXN_163));
+   RegisterFileMux  XLXI_69 (.A(A[15:0]), 
+                            .B(B[15:0]), 
+                            .C(C[15:0]), 
+                            .D(D[15:0]), 
+                            .E(E[15:0]), 
+                            .F(F[15:0]), 
+                            .G(G[15:0]), 
+                            .H(H[15:0]), 
+                            .I(I[15:0]), 
+                            .J(J[15:0]), 
+                            .S(ReadAddrB[3:0]), 
+                            .O(ReadDataB[15:0]));
+   RegisterFileMux  XLXI_70 (.A(A[15:0]), 
+                            .B(B[15:0]), 
+                            .C(C[15:0]), 
+                            .D(D[15:0]), 
+                            .E(E[15:0]), 
+                            .F(F[15:0]), 
+                            .G(G[15:0]), 
+                            .H(H[15:0]), 
+                            .I(I[15:0]), 
+                            .J(J[15:0]), 
+                            .S(ReadAddrA[3:0]), 
+                            .O(ReadDataA[15:0]));
+endmodule
